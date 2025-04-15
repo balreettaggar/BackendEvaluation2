@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login">
+        <h1>Login!</h1>
+        <form action="" class="form" method="post" onsubmit="return validateLogin()">
+            <div class="input-field">
+                <label for="Username">Username : </label>
+                <input type="text" name="Username" id="Username">
+            </div>
+            <div class="input-field">
+                <label for="Password">Password : </label>
+                <input type="password" name="Password" id="Password">
+            </div>
+            <div class="ontoRegister">
+                <!-- <span><input type="checkbox" name="Remember Me" id="Remember Me">Remember Me</span> -->
+                <span>Visiting for the first time ? <a href="registeration.html">Register Here</a></span>
+            </div>
+            <div class="submitSection">
+                <input type="submit" value="Login" class="btn">
+            </div>
+            <div class="guestAccess">
+                <p>Just browsing? <button onclick="continueAsGuest()" class="btn guestBtn">Continue as Guest</button></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let enteredUsername = document.getElementById("Username").value;
+            let enteredPassword = document.getElementById("Password").value;
+
+
+              // Admin check: Directly comparing username and password with predefined admin credentials
+            const ADMIN_USERNAME = "admin";
+            const ADMIN_PASSWORD = "admin123"
+
+             // Check if admin credentials are entered
+             if (enteredUsername === ADMIN_USERNAME && enteredPassword === ADMIN_PASSWORD) {
+                alert("Admin login successful!");
+                window.location.href = "admin.html";  // Redirect to admin page
+                return false;  // Prevent form submission
+            }
+
+            let storedUser = JSON.parse(localStorage.getItem("user"));
+    
+            if (storedUser) {
+
+                if (enteredUsername === storedUser.username && enteredPassword === storedUser.password) {
+                    alert("Login successful!");
+                    localStorage.setItem("authToken", "userToken"); // set dummy token
+                    localStorage.setItem("role", "user");
+                    localStorage.setItem("username", enteredUsername);
+                    window.location.href = "mainPage.html";
+                    return false;
+                } else {
+                    alert("Invalid username or password!");
+                    return false; 
+                }
+            } else {
+                alert("No user found! Please create an account.");
+                return false; 
+            }
+        }
+        function continueAsGuest() {
+            localStorage.setItem("role", "guest");
+            localStorage.setItem("username", "Guest");
+            localStorage.removeItem("authToken"); // Make sure no authToken is there
+            window.location.href = "mainPage.html";
+        }
+    </script>
+
+</body>
+</html>

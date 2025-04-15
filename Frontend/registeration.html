@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registeration.css">
+</head>
+<body>
+    <div class="registeration">
+        <h1>Register Here!</h1>
+        <form action="" class="form" onsubmit="return saveForm()" method="post">
+            <div class="input-field">
+                <label for="Fullname">Full Name : </label>
+                <input type="text" name="Fullname" id="Fullname">
+                <!-- <i class='bx bxs-user-circle'></i> -->
+            </div>
+            <div class="input-field">
+                <label for="Username">Username : </label>
+                <input type="text" name="Username" id="Username">
+            </div>
+            <div class="input-field">
+                <label for="Email">Email : </label>
+                <input type="text" name="Email" id="Email">
+            </div>
+            <div class="input-field">
+                <label for="Password">Password : </label>
+                <input type="password" name="Password" id="Password">
+            </div>
+            <div class="input-field">
+                <label for="confirmPassword">Confirm Password : </label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+            </div>
+            <div class="ontoLogin">
+                <span><input type="checkbox" name="Remember Me" id="Remember Me">Remember Me</span>
+                <span>Already a user ? <a href="login.html">Login</a></span>
+            </div>
+            <div class="submitSection">
+                <button type="submit" value="Register" class="btn">Submit
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript"language="javascript">
+        function saveForm() {
+        let un = document.getElementById("Username").value;
+        let pw = document.getElementById("Password").value;
+
+        // Save to localStorage
+        localStorage.setItem("user", JSON.stringify({ username: un, password: pw }));
+        
+        alert("Account created successfully! Redirecting to login page...");
+        
+        // Redirect to login page
+        window.location.href = "login.html";
+        
+        return false; // Prevent form submission
+           }
+    </script>
+
+</body>
+</html>

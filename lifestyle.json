@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1744744627777,
+    "title": "backend evaluation",
+    "author": "balreet",
+    "content": "its a blog creating website",
+    "likes": 2,
+    "dislikes": 0,
+    "comments": [
+      {
+        "user": "Anonymous",
+        "text": "hello"
+      }
+    ],
+    "ratings": [
+      4
+    ],
+    "averageRating": "4.0",
+    "date": "2025-04-15T19:17:07.777Z",
+    "reported": false
+  }
+]

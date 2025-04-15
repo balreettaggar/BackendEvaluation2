@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics Blog</title>
+    <link rel="stylesheet" href="academics.css">
+</head>
+<body>
+    <header class="header">
+        <div class="academics">
+            <h1>Academics</h1>
+            <p><b>Welcome to the Academics section – where learning meets curiosity!</b><br><br>
+            Dive deep into a world of knowledge, insights, and strategies designed to help you excel in your educational journey. Whether you’re looking to master complex concepts, find effective study tips, or stay updated with the latest in the academic world, this is your go-to place.<br><br>
+            Let’s turn challenges into achievements and questions into discoveries. Happy learning!
+            </p>
+        </div>
+    </header>
+
+    <!-- Popular Blogs Section -->
+    <section class="section">
+        <h2>Popular Blogs</h2>
+        <div class="blogs">
+            <div class="blog">
+                <div class="person">
+                    <img src="../Assets/acad1.png" alt="Poincare Conjecture" class="acad1">
+                    <div class="personInfo">
+                        <h4>Poincare Conjecture</h4>
+                        <p>Dr. James Sieve</p>
+                    </div>
+                </div>
+                <div class="content">
+                    The Poincaré Conjecture is about understanding the shape of spaces. It says that if you have a shape in three dimensions that has no holes (like a solid ball) and every loop on it can be shrunk to a point without breaking the surface, then that shape must be a 3-dimensional sphere. In other words, the only way to have a 3D shape with no holes and no weird twists is if it's just like the surface of a regular ball.
+                </div>
+            </div>
+            <div class="blog">
+                <div class="person">
+                    <img src="../Assets/acad2.png" alt="Space Engineering" class="acad2">
+                    <div class="personInfo">
+                        <h4>Space Engineering</h4>
+                        <p>Prof. Walter Lewin</p>
+                    </div>
+                </div>
+                <div class="content">
+                    Space engineering is the field of designing and building technology for space exploration and use. It involves creating rockets, satellites, space stations, and other spacecraft. Engineers in this field work on making vehicles that can survive the harsh conditions of space, such as extreme temperatures and radiation. They also design systems for communication, navigation, and scientific experiments in space. Space engineering combines knowledge from physics, mathematics, computer science, and mechanical and electrical engineering to solve complex challenges and help us explore and use outer space safely and efficiently.
+                </div>
+            </div>
+            <div class="blog">
+                <div class="person">
+                    <img src="../Assets/acad3.png" alt="Data and Science" class="acad3">
+                    <div class="personInfo">
+                        <h4>Data and Science</h4>
+                        <p>Eng. Tiera Guinn</p>
+                    </div>
+                </div>
+                <div class="content">
+                    Data science is the field of using data to solve problems and make decisions. It involves collecting, cleaning, and analyzing large amounts of information to find patterns, trends, and insights. Data scientists use mathematics, statistics, and computer programming to work with this data. They build models and algorithms to make predictions or automate tasks. For example, data science is used in recommendations on streaming platforms, detecting fraud in banking, and improving healthcare by analyzing patient data. It's all about turning raw data into useful knowledge.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Your Own Blog Section -->
+    <section class="create">
+        <h2>Create Your Own Blog</h2>
+        <form id="blogForm">
+            <input type="text" id="blogTitle" placeholder="Title" required>
+            <input type="text" id="blogAuthor" placeholder="Author" required>
+            <textarea id="blogContent" placeholder="Write your blog..." required></textarea>
+            <button type="submit">Add Blog</button>
+        </form>
+    </section>    
+
+    <script src="academics.js">
+
+    </script>
+</body>
+</html>

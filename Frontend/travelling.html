@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelling Blog</title>
+    <link rel="stylesheet" href="travelling.css">
+</head>
+<body>
+    <header class="header">
+        <div class="lifestyle">
+            <h1>Travelling</h1>
+            <p>
+                Welcome to the Travelling Section – Your Gateway to Adventure! <br><br>
+                Pack your bags and fuel your wanderlust! Whether you're a thrill-seeker, a culture enthusiast, or a peace-loving explorer, this is your ultimate destination for breathtaking travel stories, hidden gems, and expert tips. <br><br>
+                Let’s turn dreams into itineraries and moments into memories. Where will your next adventure take you? 
+            </p>
+        </div>
+    </header>
+
+    <!-- Popular Blogs Section -->
+    <section class="section">
+        <h2>Popular Blogs</h2>
+        <div class="blogs">
+            <article class="blog">
+                <div class="person">
+                    <img src="../Assets/acad3.png" alt="Skin Care and Health" class="life1">
+                    <div class="personInfo">
+                        <h4>India - Land of Diversity</h4>
+                        <p>Hary Helen</p>
+                    </div>
+                </div>
+                <div class="content">
+                    India, a vibrant tapestry of cultures, traditions, and landscapes, is a land where ancient history meets modern innovation. From the majestic Himalayas to serene backwaters, from bustling cities to timeless villages, every corner tells a story. With its rich heritage, diverse cuisine, and warm hospitality, India captivates hearts like no other.
+                </div>
+            </article>
+            <article class="blog">
+                <div class="person">
+                    <img src="../Assets/life1.png" alt="Self Improvement" class="life2">
+                    <div class="personInfo">
+                        <h4>Los Angeles - The Night Life</h4>
+                        <p>Charli D'Amelio</p>
+                    </div>
+                </div>
+                <div class="content">
+                    Los Angeles comes alive after dark with its electrifying nightlife. From glamorous rooftop bars and celebrity-packed clubs to live music venues and late-night food spots, the city offers something for everyone. Whether you're strolling down Sunset Boulevard or dancing in Hollywood, LA’s nightlife is a blend of luxury, energy, and endless excitement. 
+                </div>
+            </article>
+            <article class="blog">
+                <div class="person">
+                    <img src="../Assets/acad1.png" alt="Fashion and Style" class="life3">
+                    <div class="personInfo">
+                        <h4>Egypt - The Pyramids</h4>
+                        <p>Amanda Gorman</p>
+                    </div>
+                </div>
+                <div class="content">
+                    Standing tall for over 4,500 years, the Pyramids of Egypt are a testament to human ingenuity and architectural brilliance. The Great Pyramid of Giza, one of the Seven Wonders of the Ancient World, continues to awe visitors with its grandeur. These mystical structures hold secrets of pharaohs, history, and an enduring legacy of civilization.
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Create Your Own Blog Section -->
+    <section class="create">
+        <h2>Create Your Own Blog</h2>
+        <form id="blogForm">
+            <input type="text" id="blogTitle" placeholder="Title" required>
+            <input type="text" id="blogAuthor" placeholder="Author" required>
+            <textarea id="blogContent" placeholder="Write your blog..." required></textarea>
+            <button type="submit">Add Blog</button>
+        </form>
+    </section>
+
+    <section class="my-blogs">
+        <h2>My Blogs</h2>
+        <div id="userBlogs">
+            <p>No blogs found.</p>
+        </div>
+    </section>
+
+    <script src="travelling.js"></script>
+</body>
+</html>

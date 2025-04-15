@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lifestyle Blog</title>
+  <link rel="stylesheet" href="lifestyle.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="lifestyle">
+      <a href="mainPage.html" class="back-home">← Back to Home</a>
+      <h1>Lifestyle</h1>
+      <p>
+        Welcome to the Lifestyle section – where inspiration meets everyday living! <br><br>
+        Discover tips, trends, and stories that add a touch of style, wellness, and positivity to your life.
+        Whether you’re looking to revamp your routine, find balance, or simply get inspired, you’ve come to the right place. <br><br>
+        Live better, feel better, and be the best version of yourself – one read at a time!
+      </p> 
+    </div>
+  </header>
+
+  <!-- Popular Blogs Section -->
+  <section class="section">
+    <h2>Popular Blogs</h2>
+    <div class="blogs">
+      <article class="blog">
+        <div class="person">
+          <img src="../Assets/life1.png" alt="Skin Care and Health" class="life1" />
+          <div class="personInfo">
+            <h4>Skin Care and Health</h4>
+            <p>Dr. Mary Johnson</p>
+          </div>
+        </div>
+        <div class="content">
+          Skincare is essential for maintaining healthy and glowing skin. A good routine includes cleansing, exfoliating, moisturizing, and using sunscreen daily. Hydration and a balanced diet also play crucial roles.
+          Choosing products with natural ingredients and suitable for your skin type helps prevent issues like acne, dryness, and premature aging.
+        </div>
+      </article>
+
+      <article class="blog">
+        <div class="person">
+          <img src="../Assets/life2.png" alt="Self Improvement" class="life2" />
+          <div class="personInfo">
+            <h4>Self Improvement</h4>
+            <p>Alex Costa</p>
+          </div>
+        </div>
+        <div class="content">
+          Self-improvement is about enhancing your skills, mindset, and overall personality to become the best version of yourself.
+          It involves developing good habits, boosting confidence, and maintaining a positive attitude. An important aspect of self-improvement is dressing well, as it influences first impressions and boosts self-esteem.
+        </div>
+      </article>
+
+      <article class="blog">
+        <div class="person">
+          <img src="../Assets/life3.png" alt="Fashion and Style" class="life3" />
+          <div class="personInfo">
+            <h4>Fashion and Style</h4>
+            <p>Amanda Gorman</p>
+          </div>
+        </div>
+        <div class="content">
+          Fashion and style are powerful forms of self-expression. While fashion refers to the latest trends and popular clothing designs,
+          style is about how an individual chooses to wear them, reflecting their personality and preferences.
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Create Your Own Blog Section -->
+  <section class="create">
+    <h2>Create Your Own Blog</h2>
+    <form id="blogForm">
+      <input type="text" id="blogTitle" placeholder="Title" required />
+      <input type="text" id="blogAuthor" placeholder="Author" required />
+      <textarea id="blogContent" placeholder="Write your blog..." required></textarea>
+      <button type="submit">Add Blog</button>
+    </form>
+  </section>
+
+  <!-- User Blogs Section -->
+  <section class="my-blogs">
+    <h2>My Blogs</h2>
+    <div id="userBlogs">
+      <p>No blogs found.</p>
+    </div>
+  </section>
+
+  <div id="loginPopup" >
+    <div>
+      <p><strong>Log in before proceeding</strong></p>
+      <a href="login.html">Log in here</a>
+      <br/><br/>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+  <script src="lifestyle.js"></script>
+</body>
+</html>
+
